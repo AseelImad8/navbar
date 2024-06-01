@@ -7,6 +7,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 20px 0px;
     background-color: #fff;
+    z-index: 9;
 }
 
 .header .logo {
@@ -51,13 +52,314 @@
     color: #fff;
 }
 
+.bars-menu {
+    display: none;
+}
+
 @media (max-width:990px) {
     .nav {
+        display: none;
+    }
+
+    .auth {
+        display: none;
+    }
+
+    .bars-menu {
+        display: inline-block;
+    }
+}
+
+@media (max-width:400px) {
+    .logo a {
         display: none;
     }
 }
 
 /* end header */
+
+/* start section two*/
+.two {
+    padding: 20px;
+}
+
+.two .photo {
+    justify-content: flex-end;
+}
+
+.detail,
+.photo {
+    width: calc((100% - 30px) / 2);
+}
+
+.detail {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 25px;
+    flex-basis: 287px;
+    flex-grow: 1;
+}
+
+.detail .title {
+    color: var(--mainColor);
+}
+
+.detail span {
+    color: var(--mainColor);
+    font-weight: 700;
+}
+
+.detail p {
+    color: #969696;
+}
+
+.detail a {
+    width: 130px;
+    text-align: center;
+    border: 1px solid var(--mainColor);
+    background-color: var(--mainColor);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.detail .icon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.detail .icon .video {
+    background-color: red;
+}
+
+
+.detail .icon .black {
+    color: #0a0909
+}
+
+.detail button {
+    width: 130px;
+    height: 45px;
+    border: #fff;
+    background-color: #fff;
+}
+
+@media (max-width:760px) {
+    .two .photo {
+        width: 100%;
+        padding-top: 20px;
+    }
+}
+@media (max-width:440px) {
+    .container{
+        width: calc(100% - 20px);
+        margin: auto;
+    }
+}
+
+/* end section two */
+
+/* start PeopleTaking-courses */
+.PeopleTaking-courses {
+    background-color: #131ef0;
+    padding: 40px;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.photo,
+.selected {
+    width: calc((100% - 30px) / 2);
+}
+
+.photo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo img {
+    width: 350px;
+}
+
+.selected {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.selected span {
+    color: #f0c932;
+}
+
+.selected p {
+    color: #dddddd;
+}
+
+.selected .row:first-of-type span {
+    font-weight: 700;
+}
+
+.selected .row {
+    justify-content: flex-start;
+    gap: 80px;
+}
+
+.selected .row .one {
+    justify-content: flex-start;
+    width: calc((100% - 160px)/3);
+    text-align: center;
+}
+
+@media (max-width:920px) {
+    .selected {
+        width: 100%;
+    }
+}
+
+@media (max-width:400px) {
+    .container {
+        width: 100%
+    }
+}
+
+/*end PeopleTaking-courses */
+
+/* start courses */
+.courses {
+    padding: 40px 0;
+}
+
+.courses .row {
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.course {
+    width: calc((100% - 20px) / 2);
+    box-shadow: 0px 7.437575340270996px 7.437575340270996px rgba(0, 0, 0, 0.05);
+
+}
+
+.course-items,
+.course-description {
+    width: calc((100% - 30px) / 2);
+}
+
+.course h2 {
+    font-size: 18px;
+}
+
+.course .class-details {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.class-details .row {
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.class-details .row:first-of-type span {
+    color: var(--mainColor);
+}
+
+.class-details .row:last-of-type {
+    padding: 10px;
+    justify-content: flex-start;
+}
+
+.class-details .row:last-of-type span {
+    color: #969696;
+}
+
+.course-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.course-card {
+    position: relative;
+}
+
+.course img {
+    width: 100%;
+    filter: brightness(80%);
+
+}
+
+.course-info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.course-info span:first-of-type {
+    width: 140px;
+    background-color: var(--mainColor);
+    padding: 10px 20px;
+}
+
+.course-info span:last-of-type {
+    color: #fff;
+    font-size: 20px;
+    align-self: self-end;
+}
+
+.course-description {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    flex-direction: column;
+    flex-basis: 515px;
+    flex-grow: 1;
+}
+
+.course-description a {
+    width: 130px;
+    text-align: center;
+    border: 1px solid var(--mainColor);
+    background-color: var(--mainColor);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.course-description h2 {
+    font-size: 30px;
+}
+
+@media (max-width:635px) {
+    .course {
+        width: 100%;
+    }
+}
+
+@media (max-width:360px) {
+    .course-info {
+        display: none;
+    }
+}
+
+/* end courses */
 
 /* start testimonials */
 .testimonials {
@@ -78,10 +380,11 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
-    width: calc((100% - 40px) / 2);
+    flex-basis: 400px;
     box-shadow: 0px 8.23719596862793px 8.23719596862793px rgba(0, 0, 0, 0.1);
     padding: 20px;
     position: relative;
+    flex-grow: 1;
 }
 
 .testimonial :after {
@@ -126,12 +429,12 @@
     gap: 7px;
 }
 
-.testimonial q {
+.testimonial p {
     color: #646464;
 }
 
 .testimonial blockquote p {
-    display: inline;
+    display: inline-block;
     padding: 0 10px;
 }
 
@@ -160,6 +463,8 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    flex-basis: 400px;
+    flex-grow: 1;
 }
 
 .footer .footer-left .logo {
@@ -197,6 +502,10 @@
     box-sizing: content-box;
 }
 
+.footer-right {
+    flex-grow: 1;
+}
+
 .footer-right .row {
     justify-content: space-evenly;
     align-items: flex-start;
@@ -214,6 +523,13 @@
     flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+@media (max-width:400px) {
+    .footer-left {
+        text-align: center;
+        align-items: center;
+    }
 }
 
 /* end footer   */
